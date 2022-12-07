@@ -25,10 +25,15 @@ class _Icons extends _AssetsHolder {
   String get statisticsAct => '$basePath/statisticsAct.svg';
   String get profile => '$basePath/profile.svg';
   String get profileAct => '$basePath/profileAct.svg';
+  String get arrowBack => '$basePath/arrow_back.svg';
+  String get google => '$basePath/google.svg';
+  String get facebook => '$basePath/facebook.svg';
 }
 
 class _Images extends _AssetsHolder {
   const _Images() : super('assets/images');
 
-  String get getStarted => '$basePath/get_started.jpg';
+  String get o => '$basePath/o.png';
+  String get logo => '$basePath/logo.png';
+  String get peoples2 => '$basePath/peoples2.png';
 }
