@@ -15,6 +15,7 @@ class _ViewPageState extends State<ViewPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       extendBody: true,
       body: pages[pageIndex],
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

@@ -26,6 +26,9 @@ class _Icons extends _AssetsHolder {
   String get profile => '$basePath/profile.svg';
   String get profileAct => '$basePath/profileAct.svg';
   String get sunIcon => '$basePath/sun_icon.svg';
+  String get backArrow => '$basePath/back_arrow.svg';
+  String get pinIcon => '$basePath/pin_icon.svg';
+  String get arrowRightIcon => '$basePath/arrow_right_icon.svg';
 }
 
 class _Images extends _AssetsHolder {
@@ -35,4 +38,5 @@ class _Images extends _AssetsHolder {
   String get defAvatar => '$basePath/def_avatar.png';
   String get medal => '$basePath/medal.png';
   String get linear => '$basePath/linear.png';
+  String get defImage => '$basePath/def_image.png';
 }

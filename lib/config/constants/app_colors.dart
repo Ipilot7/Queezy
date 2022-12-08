@@ -7,6 +7,7 @@ abstract class AppColors {
   static const Color pinkLight = Color(0xffFFD6DD);
   static const Color avatarColor = Color(0xffBF83FF);
   static const Color textColor = Color(0xff0C092A);
+  static const Color greyColor = Color(0xffcccccc);
 
   static PrimaryColor primaryColor = const PrimaryColor(
     0xFF6A5AE0,
