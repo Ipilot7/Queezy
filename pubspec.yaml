@@ -18,6 +18,8 @@ dependencies:
   flutter_screenutil: ^5.6.0
   auto_size_text: ^3.0.0
   flutter_svg: ^1.1.6
+  animate_do: ^3.0.2
+  smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
   flutter_test:
