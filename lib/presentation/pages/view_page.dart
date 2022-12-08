@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:queezy/config/constants/app_colors.dart';
-import 'package:queezy/config/constants/assets.dart';
 import 'package:queezy/config/constants/local_data.dart';
 
 class ViewPage extends StatefulWidget {
@@ -99,6 +97,4 @@ class _ViewPageState extends State<ViewPage> {
       },
     );
   }
-
- 
 }

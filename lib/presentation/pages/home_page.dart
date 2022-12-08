@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:queezy/presentation/routes/routes.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,8 +11,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('home'),
+    return Center(
+      child: InkWell(
+          onTap: () {
+            Navigator.pushNamed(context, Routes.loginAndSignUp);
+          },
+          child: Text('login')),
     );
   }
 }
