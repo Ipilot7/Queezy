@@ -7,6 +7,7 @@ abstract class AppColors {
   static const Color pinkLight = Color(0xffFFD6DD);
   static const Color avatarColor = Color(0xffBF83FF);
   static const Color textColor = Color(0xff0C092A);
+  static const Color blue = Color(0xff0056B2);
 
   static PrimaryColor primaryColor = const PrimaryColor(
     0xFF6A5AE0,
@@ -18,11 +19,8 @@ abstract class AppColors {
     },
   );
 
-  
   static MetalColor metalColor = MetalColor();
 }
-
-
 
 class PrimaryColor extends ColorSwatch<int> {
   const PrimaryColor(super.primary, super.swatch);
@@ -38,7 +36,7 @@ class MetalColor extends ColorSwatch<int> {
       : super(
           0xff111827,
           <int, Color>{
-            100: const Color(0xff49465F),
+            100: const Color(0xff0C092A),
             90: const Color(0xFF49465F),
             70: const Color(0xff858494),
             50: const Color(0xffCCCCCC),

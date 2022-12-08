@@ -25,14 +25,11 @@ class _Icons extends _AssetsHolder {
   String get statisticsAct => '$basePath/statisticsAct.svg';
   String get profile => '$basePath/profile.svg';
   String get profileAct => '$basePath/profileAct.svg';
-  String get sunIcon => '$basePath/sun_icon.svg';
 }
 
 class _Images extends _AssetsHolder {
   const _Images() : super('assets/images');
 
+
   String get getStarted => '$basePath/get_started.jpg';
-  String get defAvatar => '$basePath/def_avatar.png';
-  String get medal => '$basePath/medal.png';
-  String get linear => '$basePath/linear.png';
 }
