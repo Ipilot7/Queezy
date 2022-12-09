@@ -36,6 +36,7 @@ abstract class AppTextStyles {
       fontSize: 22.sp,
       color: AppColors.metalColor.white);
 
+
   static TextStyle body20w5 = TextStyle(
       fontFamily: fontFamily,
       fontWeight: FontWeight.w500,
