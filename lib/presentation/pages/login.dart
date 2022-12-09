@@ -125,7 +125,9 @@ class _LoginPageState extends State<LoginPage> {
                     text: 'Login',
                     textcolor: AppColors.metalColor.white,
                     bgColor: AppColors.primaryColor,
-                    onPressed: () {}),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/homePage');
+                    }),
               ),
               Center(
                 child: RichText(
