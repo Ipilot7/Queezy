@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../../../../../config/constants/assets.dart';
+import '../../../../routes/routes.dart';
 import '../../data/models/onBoarding_model.dart';
 import '../widgets/onBoarding_container.dart';
 
@@ -22,11 +24,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
     super.dispose();
   }
 
-  Widget animation(
-    int index,
-    int delay,
-    Widget child,
-  ) {
+  Widget animation(int index, int delay, Widget child) {
     if (index == 1) {
       return FadeInDown(
         delay: Duration(milliseconds: delay),
@@ -42,20 +40,31 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _onBoardingBody(),
+      body: _onBoardingBody(context),
     );
   }
 
-  Widget _onBoardingBody() {
-    return Stack(
-      children: [
-        _onBoardingImage(),
-        _onBoardingInfo(),
-      ],
+  Widget _onBoardingBody(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    return Container(
+      width: size.width,
+      height: size.height,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(Assets.images.onBoardingBack1),
+          fit: BoxFit.cover,
+        ),
+      ),
+      child: Stack(
+        children: [
+          _onBoardingImage(context),
+          _onBoardingInfo(context),
+        ],
+      ),
     );
   }
 
-  _onBoardingImage() {
+  _onBoardingImage(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return PageView.builder(
       controller: pageController,
@@ -67,40 +76,26 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       },
       physics: const BouncingScrollPhysics(),
       itemBuilder: ((context, index) {
-        return SizedBox(
-          width: size.width,
-          height: size.height,
-          child: Stack(
-            children: [
-              /// IMG
-              Container(
-                width: size.width,
-                height: size.height,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(onBoardingItems[index].backImg),
-                    fit: BoxFit.cover,
-                  ),
-                ),
+        return Stack(
+          children: [
+            /// IMG
+            Container(
+              margin: const EdgeInsets.fromLTRB(10, 40, 20, 10),
+              width: size.width,
+              height: size.height / 1.5,
+              child: animation(
+                index,
+                100,
+                Image.asset(onBoardingItems[index].img),
               ),
-              Container(
-                margin: const EdgeInsets.fromLTRB(10, 40, 20, 10),
-                width: size.width,
-                height: size.height / 1.5,
-                child: animation(
-                  index,
-                  100,
-                  Image.asset(onBoardingItems[index].img),
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         );
       }),
     );
   }
 
-  _onBoardingInfo() {
+  _onBoardingInfo(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Align(
       alignment: Alignment.center,
@@ -137,13 +132,11 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               });
             },
           ),
-          SizedBox(
-            height: size.height * 0.02,
-          ),
+          SizedBox(height: size.height * 0.02),
           OnBoardingContainer(
-            title: onBoardingItems[currentIndex + 1 - 1].title,
-            tNext: onBoardingItems[currentIndex + 1 - 1].next,
-            tSkip: onBoardingItems[currentIndex + 1 - 1].skip,
+            title: onBoardingItems[currentIndex].title,
+            tNext: onBoardingItems[currentIndex].next,
+            tSkip: onBoardingItems[currentIndex].skip,
             next: () {
               setState(() {
                 if (currentIndex < 2) {
@@ -151,7 +144,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                       duration: const Duration(milliseconds: 1000),
                       curve: Curves.fastOutSlowIn);
                 } else {
-                  Navigator.pushNamed(context, '/homePage');
+                  Navigator.pushReplacementNamed(context, Routes.loginAndSignUp);
                 }
               });
             },

@@ -7,20 +7,32 @@ import 'package:queezy/config/constants/assets.dart';
 class CustomAppBarWidget extends StatelessWidget {
   const CustomAppBarWidget({
     super.key,
+    this.backIcon,
+    required this.title,
+    this.titleTextStyle,
+    this.onPressed,
+    required this.isHavePadding,
   });
+
+  final String? backIcon;
+  final String title;
+  final TextStyle? titleTextStyle;
+  final VoidCallback? onPressed;
+  final bool isHavePadding;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(20.w, 45.h, 24.w, 22.h),
+      padding: EdgeInsets.fromLTRB(
+          isHavePadding ? 0 : 20.w, 45.h, isHavePadding ? 0.w : 24.w, 22.h),
       child: Row(
         children: [
           IconButton(
-            onPressed: () {},
-            icon: SvgPicture.asset(Assets.icons.backArrow),
+            onPressed: onPressed ?? () => Navigator.pop(context),
+            icon: SvgPicture.asset(backIcon ?? Assets.icons.backArrow),
           ),
           const Spacer(flex: 2),
-          Text('Discover', style: AppTextStyles.head24w5),
+          Text(title, style: titleTextStyle ?? AppTextStyles.head24w5),
           const Spacer(flex: 3),
         ],
       ),

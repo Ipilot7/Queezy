@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:queezy/presentation/pages/home_page/presentation/pages/home_page.dart';
 
-import 'package:queezy/presentation/pages/login.dart';
-import 'package:queezy/presentation/pages/login_and_signup.dart';
-import 'package:queezy/presentation/pages/singup.dart';
+import 'package:queezy/presentation/pages/auth/presentation/pages/login_and_signup.dart';
+import 'package:queezy/presentation/pages/auth/presentation/pages/singup.dart';
 import 'package:queezy/presentation/pages/view_page.dart';
 import 'package:queezy/presentation/pages/onBoarding_page/presentation/pages/onBoarding_page.dart';
 
+import '../pages/auth/presentation/pages/login.dart';
 import '/presentation/pages/onBoarding_page/presentation/pages/splash_page.dart';
 
 class Routes {
-  static const homePage = '/homePage';
+  static const viewPage = '/viewPage';
   static const loginAndSignUp = '/loginAndSignUp';
-  static const login = '/login';
+  static const login = '/auth';
   static const singUp = '/singUp';
   static const splashPage = '/splashPage';
   static const onBoardingPage = '/onBoardingPage';
+  static const homePage = '/homePage';
+  static const searchPage = '/searchPage';
 
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     try {
@@ -22,10 +25,20 @@ class Routes {
           routeSettings.arguments as Map<String, dynamic>?;
       args ?? <String, dynamic>{};
       switch (routeSettings.name) {
-        case homePage:
+        case viewPage:
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const ViewPage(),
+          );
+        case homePage:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => const HomePage(),
+          );
+        case searchPage:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => const HomePage(),
           );
 
         case splashPage:
@@ -33,7 +46,7 @@ class Routes {
             settings: routeSettings,
             builder: (_) => const SplashPage(),
           );
-        case onBoardingPage:
+          case onBoardingPage:
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const OnBoardingPage(),

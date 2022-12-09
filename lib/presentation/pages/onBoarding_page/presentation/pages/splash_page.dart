@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:queezy/presentation/routes/routes.dart';
 
 import '/config/constants/app_colors.dart';
 import '/config/constants/assets.dart';
@@ -17,39 +18,27 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    Timer(
-      const Duration(seconds: 2),
-      () => Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const OnBoardingPage(),
-        ),
-      ),
-    );
+    Timer(const Duration(seconds: 3), () {
+      Navigator.pushReplacementNamed(context, Routes.onBoardingPage);
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.primaryColor.primary,
-      body: Stack(
-        children: [
-          Image(
-            image: AssetImage(
-              Assets.images.splashBack,
-            ),
-            fit: BoxFit.cover,
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage(Assets.images.splashBack),
+                fit: BoxFit.cover)),
+        child: Center(
+          child: Image.asset(
+            Assets.images.appLogo,
+            height: 166,
+            width: 124,
           ),
-          Center(
-            child: Image(
-              image: AssetImage(
-                Assets.images.appLogo,
-              ),
-              height: 166,
-              width: 124,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:queezy/presentation/pages/search_page/presentation/widgets/custom_app_bar.dart';
 import 'package:queezy/presentation/pages/search_page/presentation/widgets/custom_tap_bar_view.dart';
 import 'package:queezy/presentation/pages/search_page/presentation/widgets/search_text_field_widget.dart';
+import 'package:queezy/presentation/widgets/custom_app_bar.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -17,7 +17,7 @@ class _SearchPageState extends State<SearchPage> {
       length: 3,
       child: Column(
         children: const [
-          CustomAppBarWidget(),
+          CustomAppBarWidget(title: 'Discover',isHavePadding: false),
           SearchTextFieldWidget(),
           CustomTabBarWidget(),
           CustomTabBarViewWidget()
@@ -26,5 +26,3 @@ class _SearchPageState extends State<SearchPage> {
     );
   }
 }
-
-
