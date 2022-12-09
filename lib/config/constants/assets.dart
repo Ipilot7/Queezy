@@ -29,9 +29,17 @@ class _Icons extends _AssetsHolder {
   String get backArrow => '$basePath/back_arrow.svg';
   String get pinIcon => '$basePath/pin_icon.svg';
   String get arrowRightIcon => '$basePath/arrow_right_icon.svg';
-    String get arrowBack => '$basePath/arrow_back.svg';
+  String get arrowBack => '$basePath/arrow_back.svg';
   String get google => '$basePath/google.svg';
   String get facebook => '$basePath/facebook.svg';
+  String get earth => '$basePath/earth.svg';
+  String get localRank => '$basePath/localRank.svg';
+  String get settings => '$basePath/settings.svg';
+  String get star => '$basePath/star.svg';
+  String get divider => '$basePath/divider.svg';
+  String get coma => '$basePath/coma.svg';
+  String get metal => '$basePath/metal.svg';
+  String get pencil => '$basePath/pencil.svg';
 }
 
 class _Images extends _AssetsHolder {
@@ -53,8 +61,6 @@ class _Images extends _AssetsHolder {
   String get medal => '$basePath/medal.png';
   String get linear => '$basePath/linear.png';
   String get defImage => '$basePath/def_image.png';
-
-
-
-
+  String get profileBg => '$basePath/profileBg.png';
+  String get badge => '$basePath/badge.png';
 }
