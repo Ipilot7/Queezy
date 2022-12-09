@@ -151,7 +151,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                       duration: const Duration(milliseconds: 1000),
                       curve: Curves.fastOutSlowIn);
                 } else {
-                  Navigator.pushNamed(context, '/homePage');
+                  Navigator.pushReplacementNamed(context, '/loginAndSignUp');
                 }
               });
             },

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:queezy/config/constants/app_colors.dart';
-import 'package:queezy/config/constants/app_text_styles.dart';
-import 'package:queezy/config/constants/assets.dart';
-import 'package:queezy/presentation/widgets/custom_button.dart';
-import 'package:queezy/presentation/widgets/custom_text_field.dart';
+
+import '/config/constants/app_colors.dart';
+import '/config/constants/app_text_styles.dart';
+import '/config/constants/assets.dart';
+import '/presentation/widgets/custom_button.dart';
+import '/presentation/widgets/custom_text_field.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

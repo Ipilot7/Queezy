@@ -11,9 +11,11 @@ class ViewPage extends StatefulWidget {
 
 class _ViewPageState extends State<ViewPage> {
   int pageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: pages[pageIndex],
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: ClipRRect(
@@ -23,58 +25,15 @@ class _ViewPageState extends State<ViewPage> {
           shape: const CircularNotchedRectangle(),
           notchMargin: 9,
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            padding: const EdgeInsets.fromLTRB(16, 10, 16, 20),
             child: Row(mainAxisSize: MainAxisSize.max, children: [
-              BottomIcons(0),
+              bottomIcons(0),
               const Spacer(),
-              BottomIcons(1),
+              bottomIcons(1),
               const Spacer(flex: 3),
-              BottomIcons(2),
+              bottomIcons(2),
               const Spacer(),
-              BottomIcons(3), // Row(
-              //   // mainAxisSize: MainAxisSize.max,
-              //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //   children: [
-              //     IconButton(
-              //       icon: pageIndex == 0 ? buttonIconsAct[0] : buttonIcons[0],
-              //       onPressed: () {
-              //         setState(() {
-              //           pageIndex = 0;
-              //         });
-              //       },
-              //     ),
-              //     IconButton(
-              //       icon: pageIndex == 1 ? buttonIconsAct[1] : buttonIcons[1],
-              //       onPressed: () {
-              //         setState(() {
-              //           pageIndex = 1;
-              //         });
-              //       },
-              //     ),
-              //   ],
-              // ),
-              // Row(
-              //   mainAxisSize: MainAxisSize.max,
-              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //   children: [
-              //     IconButton(
-              //       icon: pageIndex == 2 ? buttonIconsAct[2] : buttonIcons[2],
-              //       onPressed: () {
-              //         setState(() {
-              //           pageIndex = 2;
-              //         });
-              //       },
-              //     ),
-              //     IconButton(
-              //       icon: pageIndex == 3 ? buttonIconsAct[3] : buttonIcons[3],
-              //       onPressed: () {
-              //         setState(() {
-              //           pageIndex = 3;
-              //         });
-              //       },
-              //     ),
-              //   ],
-              // )
+              bottomIcons(3),
             ]),
           ),
         ),
@@ -87,7 +46,7 @@ class _ViewPageState extends State<ViewPage> {
     );
   }
 
-  IconButton BottomIcons(int index) {
+  IconButton bottomIcons(int index) {
     return IconButton(
       icon: pageIndex == index ? buttonIconsAct[index] : buttonIcons[index],
       onPressed: () {

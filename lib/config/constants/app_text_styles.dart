@@ -6,7 +6,7 @@ import 'app_colors.dart';
 abstract class AppTextStyles {
   const AppTextStyles._();
 
-  static const String fontFamily = 'Montserrat';
+  static const String fontFamily = 'Rubik';
 
   static TextStyle head32w7 = TextStyle(
       fontFamily: fontFamily,

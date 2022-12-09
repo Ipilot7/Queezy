@@ -14,10 +14,8 @@ class Routes {
   static const loginAndSignUp = '/loginAndSignUp';
   static const login = '/login';
   static const singUp = '/singUp';
-  static const homePage = '/homePage';
   static const splashPage = '/splashPage';
   static const onBoardingPage = '/onBoardingPage';
-
 
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     try {
@@ -40,7 +38,7 @@ class Routes {
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const OnBoardingPage(),
-
+          );
         case loginAndSignUp:
           return MaterialPageRoute(
             settings: routeSettings,
@@ -51,11 +49,10 @@ class Routes {
             settings: routeSettings,
             builder: (_) => const LoginPage(),
           );
-          case singUp:
+        case singUp:
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const SignUpPage(),
-
           );
         default:
           return MaterialPageRoute(
