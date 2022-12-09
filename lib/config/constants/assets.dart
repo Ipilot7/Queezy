@@ -25,10 +25,36 @@ class _Icons extends _AssetsHolder {
   String get statisticsAct => '$basePath/statisticsAct.svg';
   String get profile => '$basePath/profile.svg';
   String get profileAct => '$basePath/profileAct.svg';
+  String get sunIcon => '$basePath/sun_icon.svg';
+  String get backArrow => '$basePath/back_arrow.svg';
+  String get pinIcon => '$basePath/pin_icon.svg';
+  String get arrowRightIcon => '$basePath/arrow_right_icon.svg';
+    String get arrowBack => '$basePath/arrow_back.svg';
+  String get google => '$basePath/google.svg';
+  String get facebook => '$basePath/facebook.svg';
 }
 
 class _Images extends _AssetsHolder {
   const _Images() : super('assets/images');
 
   String get getStarted => '$basePath/get_started.jpg';
+  String get appLogo => '$basePath/appLogo.png';
+  String get splashBack => '$basePath/splashBack.png';
+  String get onBoarding1 => '$basePath/onBoarding1.png';
+  String get onBoarding2 => '$basePath/onBoarding2.png';
+  String get onBoarding3 => '$basePath/onBoarding3.png';
+  String get onBoardingBack1 => '$basePath/onBoardingBack1.png';
+  String get onBoardingBack2 => '$basePath/onBoardingBack2.png';
+  String get onBoardingBack3 => '$basePath/onBoardingBack3.png';
+  String get o => '$basePath/o.png';
+  String get logo => '$basePath/logo.png';
+  String get peoples2 => '$basePath/peoples2.png';
+  String get defAvatar => '$basePath/def_avatar.png';
+  String get medal => '$basePath/medal.png';
+  String get linear => '$basePath/linear.png';
+  String get defImage => '$basePath/def_image.png';
+
+
+
+
 }
