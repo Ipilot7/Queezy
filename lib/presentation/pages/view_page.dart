@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:queezy/config/constants/app_colors.dart';
 import 'package:queezy/config/constants/local_data.dart';
+import 'package:queezy/presentation/routes/routes.dart';
 
 class ViewPage extends StatefulWidget {
   const ViewPage({super.key});
@@ -41,7 +42,9 @@ class _ViewPageState extends State<ViewPage> {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: AppColors.primaryColor,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, Routes.settings);
+        },
         child: const Icon(Icons.add),
       ),
     );

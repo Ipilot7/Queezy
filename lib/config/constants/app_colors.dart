@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 
 abstract class AppColors {
   const AppColors._();
-
+  static const Color red=Color(0xffEB5757);
   static const Color pink = Color(0xffFF8FA2);
   static const Color pinkLight = Color(0xffFFD6DD);
   static const Color avatarColor = Color(0xffBF83FF);
   static const Color textColor = Color(0xff0C092A);
   static const Color greyColor = Color(0xffcccccc);
-  static const Color blue = Color(0xff0056B2);
   static const Color blue = Color(0xff0056B2);
 
   static PrimaryColor primaryColor = const PrimaryColor(

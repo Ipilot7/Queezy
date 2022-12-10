@@ -3,6 +3,7 @@ import 'package:queezy/presentation/pages/home_page/presentation/pages/home_page
 
 import 'package:queezy/presentation/pages/auth/presentation/pages/login_and_signup.dart';
 import 'package:queezy/presentation/pages/auth/presentation/pages/singup.dart';
+import 'package:queezy/presentation/pages/settings/presentation/pages/settings.dart';
 import 'package:queezy/presentation/pages/view_page.dart';
 import 'package:queezy/presentation/pages/onBoarding_page/presentation/pages/onBoarding_page.dart';
 
@@ -18,6 +19,8 @@ class Routes {
   static const onBoardingPage = '/onBoardingPage';
   static const homePage = '/homePage';
   static const searchPage = '/searchPage';
+  static const settings = '/settings';
+
 
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     try {
@@ -46,7 +49,7 @@ class Routes {
             settings: routeSettings,
             builder: (_) => const SplashPage(),
           );
-          case onBoardingPage:
+        case onBoardingPage:
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const OnBoardingPage(),
@@ -66,6 +69,11 @@ class Routes {
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const SignUpPage(),
+          );
+         case settings:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => const SettingsPage(),
           );
         default:
           return MaterialPageRoute(

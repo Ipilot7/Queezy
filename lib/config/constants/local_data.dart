@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:queezy/config/constants/assets.dart';
 import 'package:queezy/presentation/pages/home_page/presentation/pages/home_page.dart';
@@ -22,4 +23,15 @@ List buttonIconsAct = [
   SvgPicture.asset(Assets.icons.searchAct),
   SvgPicture.asset(Assets.icons.statisticsAct),
   SvgPicture.asset(Assets.icons.profileAct),
+];
+List accountIcon = [
+  Icons.person_outline,
+  Icons.email_outlined,
+  Icons.lock_outline
+];
+List account = ['Update Profile', 'Change Email Address', 'Change Password'];
+List accountDesc = [
+  'Update username, country, etc',
+  'madias@yahoo.com',
+  'last change 1 year ago'
 ];
