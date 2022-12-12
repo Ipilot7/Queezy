@@ -40,6 +40,8 @@ class _Icons extends _AssetsHolder {
   String get coma => '$basePath/coma.svg';
   String get metal => '$basePath/metal.svg';
   String get pencil => '$basePath/pencil.svg';
+  String get badge => '$basePath/badge.svg';
+  String get badgeBottom => '$basePath/badge_bottom.svg';
 }
 
 class _Images extends _AssetsHolder {
@@ -62,5 +64,5 @@ class _Images extends _AssetsHolder {
   String get linear => '$basePath/linear.png';
   String get defImage => '$basePath/def_image.png';
   String get profileBg => '$basePath/profileBg.png';
-  String get badge => '$basePath/badge.png';
+  String get p2 => '$basePath/p2.png';
 }
