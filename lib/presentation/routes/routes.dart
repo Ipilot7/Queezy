@@ -6,8 +6,9 @@ import 'package:queezy/presentation/pages/auth/presentation/pages/singup.dart';
 import 'package:queezy/presentation/pages/view_page.dart';
 import 'package:queezy/presentation/pages/onBoarding_page/presentation/pages/onBoarding_page.dart';
 
-import '../pages/auth/presentation/pages/login.dart';
+import '../pages/quiz_page/presentation/pages/live_quiz.dart';
 import '/presentation/pages/onBoarding_page/presentation/pages/splash_page.dart';
+import '/presentation/pages/view_page.dart';
 
 class Routes {
   static const viewPage = '/viewPage';
@@ -18,6 +19,8 @@ class Routes {
   static const onBoardingPage = '/onBoardingPage';
   static const homePage = '/homePage';
   static const searchPage = '/searchPage';
+  static const quizDetails = '/quizDetails';
+  static const liveQuiz = '/liveQuiz';
 
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     try {
@@ -40,7 +43,6 @@ class Routes {
             settings: routeSettings,
             builder: (_) => const HomePage(),
           );
-
         case splashPage:
           return MaterialPageRoute(
             settings: routeSettings,
@@ -51,7 +53,6 @@ class Routes {
             settings: routeSettings,
             builder: (_) => const OnBoardingPage(),
           );
-
         case loginAndSignUp:
           return MaterialPageRoute(
             settings: routeSettings,
@@ -67,6 +68,17 @@ class Routes {
             settings: routeSettings,
             builder: (_) => const SignUpPage(),
           );
+        case quizDetails:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => const QuizDetailsPage(),
+          );
+        case liveQuiz:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => const LiveQuizPage(),
+          );
+
         default:
           return MaterialPageRoute(
             settings: routeSettings,

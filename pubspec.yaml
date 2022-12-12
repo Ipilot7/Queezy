@@ -23,6 +23,8 @@ dependencies:
   mask_text_input_formatter: ^2.4.0
   percent_indicator: ^4.2.2
   charts_flutter_new: ^0.12.0
+  pie_timer: ^1.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

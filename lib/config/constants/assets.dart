@@ -65,4 +65,9 @@ class _Images extends _AssetsHolder {
   String get defImage => '$basePath/def_image.png';
   String get profileBg => '$basePath/profileBg.png';
   String get p2 => '$basePath/p2.png';
+  String get quizDetails => '$basePath/quizDetails.png';
+  String get divider => '$basePath/Divider.png';
+  String get questionMark => '$basePath/questionMark.png';
+  String get quizPart => '$basePath/quizPart.png';
+  String get userPng => '$basePath/userPng.png';
 }
