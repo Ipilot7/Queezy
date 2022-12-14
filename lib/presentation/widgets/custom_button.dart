@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -25,6 +26,7 @@ class CustomButton extends StatelessWidget {
     return TextButton(
       style: AppDecorations.buttonStyle(bgColor: bgColor),
       onPressed: onPressed,
+
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -33,8 +35,9 @@ class CustomButton extends StatelessWidget {
               padding: EdgeInsets.only(right: 16.w),
               child: SvgPicture.asset('$icon'),
             ),
-          Text(
+          AutoSizeText(
             text,
+            maxLines: 1,
             style: AppTextStyles.body16w5
                 .copyWith(color: textColor ?? AppColors.metalColor.white),
           ),

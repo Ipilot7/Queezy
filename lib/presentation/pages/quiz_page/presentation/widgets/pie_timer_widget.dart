@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pie_timer/pie_timer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:queezy/config/constants/app_text_styles.dart';
+
+import '../../../../components/custom_pie_timer.dart';
 
 class PieWidget extends StatefulWidget {
   const PieWidget({Key? key}) : super(key: key);
@@ -10,13 +13,14 @@ class PieWidget extends StatefulWidget {
 
 class _PieWidgetState extends State<PieWidget>
     with SingleTickerProviderStateMixin {
-  late PieAnimationController _pieAnimationController;
+  late CustomPieAnimationController _pieAnimationController;
 
   @override
   void initState() {
     super.initState();
-    _pieAnimationController = PieAnimationController(vsync: this);
-  }
+    _pieAnimationController = CustomPieAnimationController(vsync: this);
+    _pieAnimationController.startAnim?.call();
+  } 
 
   @override
   void dispose() {
@@ -29,17 +33,14 @@ class _PieWidgetState extends State<PieWidget>
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        PieTimer(
+        CustomPieTimer(
           pieAnimationController: _pieAnimationController,
           duration: const Duration(seconds: 10),
-          radius: 36,
+          radius: 36.r,
           fillColor: Color(0xffFFCCD5),
           pieColor: Color(0xffFF8FA2),
-          textStyle: const TextStyle(
-            color: Colors.white,
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-          ),
+          textStyle:
+              AppTextStyles.head24w5.copyWith(fontWeight: FontWeight.bold),
           isReverse: false,
           onCompleted: () => {},
           onDismissed: () => {},

@@ -17,6 +17,7 @@ abstract class AppDecorations {
     return ElevatedButton.styleFrom(
       shadowColor: Colors.transparent,
       fixedSize: Size.fromHeight(56.h),
+      padding: EdgeInsets.symmetric(horizontal: 18.w) ,
       elevation: 0,
       backgroundColor: bgColor ?? AppColors.primaryColor.primary,
       shape: RoundedRectangleBorder(

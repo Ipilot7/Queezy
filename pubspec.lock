@@ -231,7 +231,8 @@ packages:
     dependency: "direct main"
     description:
       name: pie_timer
-      url: "https://pub.dartlang.org"
+      sha256: "3c1ca17d7ad1b2a11a45063e360a3804e38ceaf6f564c217df3be7b9a700eada"
+      url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
   sky_engine:

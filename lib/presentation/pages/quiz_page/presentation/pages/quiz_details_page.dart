@@ -46,95 +46,87 @@ class QuizDetailsPage extends StatelessWidget {
                 children: [
                   Image.asset(Assets.images.quizDetails),
                   Container(
-                    padding: const EdgeInsets.only(
-                      left: 16,
-                      top: 20,
-                      right: 16,
-                    ),
-                    height: 504.h,
-                    width: 359.w,
+                    margin: EdgeInsets.only(left: 8.w,right: 8.w,bottom: 8.w),
+                    padding: EdgeInsets.fromLTRB(16.w, 24.h, 16.w, 16.h),
+                    height: MediaQuery.of(context).size.height*.605,
                     decoration: BoxDecoration(
                         color: AppColors.metalColor.white,
                         borderRadius: BorderRadius.circular(32)),
                     child: Column(
-                      //crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'SPORTS                                                                                    ',
+                          'SPORTS',
                           textAlign: TextAlign.start,
-                          style: AppTextStyles.body14w5
-                              .copyWith(color: AppColors.metalColor.grey2),
+                          style: AppTextStyles.body14w5.copyWith(
+                              letterSpacing: 0.8,
+                              color: AppColors.metalColor.grey2),
                         ),
-                        Padding(
+                        Container(
+                          width: MediaQuery.of(context).size.width * .5,
                           padding: EdgeInsets.only(top: 8.h, bottom: 24.h),
-                          child: Text(
+                          child: AutoSizeText(
                               textAlign: TextAlign.start,
-                              'Basic Trivia Quiz                                                       ',
-                              style: AppTextStyles.head24w5),
+                              'Basic Trivia Quiz',
+                              maxLines: 1,
+                              minFontSize: 10,
+                              style: AppTextStyles.head24w5
+                                  .copyWith(color: AppColors.textColor)),
                         ),
-                        const quizInfoContainer(),
+                        const QuizInfoContainer(),
                         Text(
-                          'DESCRIPTION                                                                      ',
+                          'DESCRIPTION',
                           textAlign: TextAlign.start,
-                          style: AppTextStyles.body16w4
-                              .copyWith(color: AppColors.metalColor.grey2),
+                          style: AppTextStyles.body14w5.copyWith(
+                              letterSpacing: 0.8,
+                              color: AppColors.metalColor.grey2),
                         ),
                         Padding(
                           padding: EdgeInsets.only(top: 8.h, bottom: 24.h),
                           child: Text(
                               textAlign: TextAlign.start,
                               'Any time is a good time for a quiz and even better if that happens to be a football themed quiz!                                                       ',
-                              style: AppTextStyles.body16w5),
+                              style: AppTextStyles.body16w4
+                                  .copyWith(color: AppColors.textColor)),
                         ),
                         Row(
                           children: [
                             const CustomAvatarWidget(),
-                            SizedBox(width: 20.w),
+                            SizedBox(width: 12.w),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                ConstrainedBox(
-                                    constraints:
-                                        BoxConstraints(maxWidth: 103.w),
-                                    child: AutoSizeText(
-                                      'Brandon Curtis',
-                                      maxLines: 1,
-                                      minFontSize: 10,
-                                      style: AppTextStyles.body16w5.copyWith(
-                                          color: AppColors.metalColor.black),
-                                    )),
-                                Container(
-                                  width: 80.w,
-                                  margin: EdgeInsets.only(top: 4.h),
-                                  child: AutoSizeText(
-                                    'Creator',
-                                    maxLines: 1,
-                                    minFontSize: 10,
-                                    style: AppTextStyles.body14w4.copyWith(
-                                        color: AppColors.metalColor.grey3),
-                                  ),
+                                AutoSizeText(
+                                  'Brandon Curtis',
+                                  maxLines: 1,
+                                  minFontSize: 10,
+                                  style: AppTextStyles.body14w5.copyWith(
+                                      color: AppColors.metalColor.black),
+                                ),
+                                AutoSizeText(
+                                  'Creator',
+                                  maxLines: 1,
+                                  minFontSize: 10,
+                                  style: AppTextStyles.body12w4.copyWith(
+                                      color: AppColors.metalColor.grey3),
                                 ),
                               ],
                             )
                           ],
                         ),
-                        SizedBox(height: 72.h),
+                        Spacer(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             CustomButton(
-                              width: 142.w,
-                              textcolor: AppColors.primaryColor.secondary,
+                              textColor: AppColors.primaryColor.secondary,
                               text: 'Play Solo',
                               bgColor: AppColors.metalColor.white,
-                              onPressed: () {
-                                Navigator.pushNamed(context, Routes.liveQuiz);
-                              },
+                              onPressed: () => Navigator.pushNamed(context, Routes.liveQuiz),
                             ),
                             CustomButton(
-                              width: 169.w,
-                              textcolor: AppColors.metalColor.white,
+                              textColor: AppColors.metalColor.white,
                               text: 'Play with Friends',
                               bgColor: AppColors.primaryColor,
                               onPressed: () {},

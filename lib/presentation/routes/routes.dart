@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:queezy/presentation/pages/home_page/presentation/pages/home_page.dart';
-
+import 'package:queezy/presentation/pages/auth/presentation/pages/login.dart';
 import 'package:queezy/presentation/pages/auth/presentation/pages/login_and_signup.dart';
 import 'package:queezy/presentation/pages/auth/presentation/pages/singup.dart';
-import 'package:queezy/presentation/pages/view_page.dart';
+import 'package:queezy/presentation/pages/home_page/presentation/pages/home_page.dart';
 import 'package:queezy/presentation/pages/onBoarding_page/presentation/pages/onBoarding_page.dart';
+import 'package:queezy/presentation/pages/quiz_page/presentation/pages/quiz_details_page.dart';
+import 'package:queezy/presentation/pages/view_page.dart';
 
-import '../pages/quiz_page/presentation/pages/live_quiz.dart';
 import '/presentation/pages/onBoarding_page/presentation/pages/splash_page.dart';
-import '/presentation/pages/view_page.dart';
+import '../pages/quiz_page/presentation/pages/live_quiz.dart';
 
 class Routes {
   static const viewPage = '/viewPage';

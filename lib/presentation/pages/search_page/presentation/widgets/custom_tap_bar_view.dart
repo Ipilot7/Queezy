@@ -6,6 +6,7 @@ import 'package:queezy/config/constants/app_colors.dart';
 import 'package:queezy/config/constants/app_text_styles.dart';
 import 'package:queezy/config/constants/assets.dart';
 
+import '../../../../routes/routes.dart';
 import 'searches_item_widget.dart';
 
 class CustomTabBarWidget extends StatelessWidget {
@@ -142,6 +143,7 @@ class SearchPageBodyWidget extends StatelessWidget {
               itemBuilder: (context, index) {
                 /// TODO this add items List
                 return SearchesItemWidget(
+                    onTap: () => Navigator.pushNamed(context, Routes.quizDetails),
                     title: "Statistics Math Quiz",
                     image: Assets.images.defImage,
                     categoryName: 'Math',

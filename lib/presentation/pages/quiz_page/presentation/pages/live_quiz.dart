@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../config/constants/assets.dart';
-import '../widgets/liveQuizCard.dart';
-import '../widgets/liveQuizContainer.dart';
-import '../widgets/live_quiz_progressBar.dart';
+import '../widgets/live_quiz_card.dart';
+import '../widgets/live-quiz_container.dart';
+import '../widgets/live_quiz_progress_bar.dart';
 
 class LiveQuizPage extends StatefulWidget {
   const LiveQuizPage({super.key});
@@ -24,14 +24,14 @@ class _LiveQuizPageState extends State<LiveQuizPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  liveQuizContainer(
+                  LiveQuizContainer(
                     bgColor: Colors.white70,
                     imgIcon: Assets.images.userPng,
                     text: '1',
                   ),
-                  liveQuizProgressBar(),
-                  liveQuizContainer(
-                    bgColor: Color(0xffFF9B57),
+                  const LiveQuizProgressBar(),
+                  LiveQuizContainer(
+                    bgColor: const Color(0xffFF9B57),
                     imgIcon: Assets.images.quizPart,
                     text: '35',
                   ),
@@ -42,7 +42,7 @@ class _LiveQuizPageState extends State<LiveQuizPage> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: PageView.builder(
-                  itemBuilder: (context, index) => questionCard(),
+                  itemBuilder: (context, index) => const QuestionCard(),
                   itemCount: 3,
                 ),
               ),
